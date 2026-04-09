@@ -212,9 +212,9 @@ window.addEventListener('scroll', () => {
 /* =========================================================
    CONTACT FORM — EmailJS
    ========================================================= */
-const EMAILJS_PUBLIC_KEY  = '5_-VtiumdcRkN-hNJ';   // Account → API Keys
-const EMAILJS_SERVICE_ID  = 'service_m4ditzo';   // Email Services tab
-const EMAILJS_TEMPLATE_ID = 'template_ym6i0y6';  // Email Templates tab
+const EMAILJS_PUBLIC_KEY  = '5_-VtiumdcRkN-hNJ';
+const EMAILJS_SERVICE_ID  = 'service_lhhczqc';
+const EMAILJS_TEMPLATE_ID = 'template_pr8xbta';
 
 emailjs.init(EMAILJS_PUBLIC_KEY);
 
@@ -233,9 +233,9 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
   const templateParams = {
     from_name:  this.name.value,
     from_email: this.email.value,
-    subject:    this.subject.value,
+    title:      this.subject.value,  // matches {{title}} in your EmailJS template subject line
+    subject:    this.subject.value,  // matches {{subject}} in your EmailJS template body
     message:    this.message.value,
-    to_email:   'arthurnengr@gmail.com',
   };
 
   emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)

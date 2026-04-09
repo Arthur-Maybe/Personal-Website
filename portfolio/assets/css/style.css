@@ -751,6 +751,13 @@ section { position: relative; z-index: 2; }
   font-family: var(--font-m); font-size: .84rem; text-align: center;
 }
 
+.form-error {
+  display: none; padding: 1rem 1.2rem;
+  background: rgba(255, 80, 80, .09); border: 1px solid rgba(255, 80, 80, .28);
+  border-radius: 10px; color: #ff6b6b;
+  font-family: var(--font-m); font-size: .84rem; text-align: center;
+}
+
 /* =========================================================
    FOOTER
    ========================================================= */
