@@ -210,19 +210,45 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 /* =========================================================
-   CONTACT FORM
-   Hook up to EmailJS, Formspree, or your own backend.
-   For now it simulates a successful send.
+   CONTACT FORM — EmailJS
    ========================================================= */
+const EMAILJS_PUBLIC_KEY  = '5_-VtiumdcRkN-hNJ';   // Account → API Keys
+const EMAILJS_SERVICE_ID  = 'service_m4ditzo';   // Email Services tab
+const EMAILJS_TEMPLATE_ID = 'template_3fsygou';  // Email Templates tab
+
+emailjs.init(EMAILJS_PUBLIC_KEY);
+
 document.getElementById('contact-form').addEventListener('submit', function(e) {
   e.preventDefault();
-  const btn = this.querySelector('button[type="submit"]');
+
+  const btn     = this.querySelector('button[type="submit"]');
+  const success = document.getElementById('form-success');
+  const error   = document.getElementById('form-error');
+
   btn.textContent = '⏳ Sending…';
-  btn.disabled = true;
-  setTimeout(() => {
-    document.getElementById('form-success').style.display = 'block';
-    btn.textContent = '🚀 Send Message';
-    btn.disabled = false;
-    this.reset();
-  }, 1400);
+  btn.disabled    = true;
+  success.style.display = 'none';
+  error.style.display   = 'none';
+
+  const templateParams = {
+    from_name:  this.name.value,
+    from_email: this.email.value,
+    subject:    this.subject.value,
+    message:    this.message.value,
+    to_email:   'arthurnengr@gmail.com',
+  };
+
+  emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+    .then(() => {
+      success.style.display = 'block';
+      this.reset();
+    })
+    .catch((err) => {
+      console.error('EmailJS error:', err);
+      error.style.display = 'block';
+    })
+    .finally(() => {
+      btn.textContent = '🚀 Send Message';
+      btn.disabled    = false;
+    });
 });
