@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arthur Nguyen — Computer Systems Engineer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- Cursor -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- Scroll progress -->
+<div id="progress"></div>
+
+<!-- Star field -->
+<canvas id="star-canvas"></canvas>
+
+<!-- Mouse spotlight -->
+<div id="spotlight"></div>
+
+<!-- ========================================================
+     NAV
+     ======================================================== -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">AN</a>
+
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <div class="nav-right">
+    <button class="theme-toggle" id="theme-btn" aria-label="Toggle theme">🌙</button>
+    <button class="hamburger" id="hamburger-btn">☰</button>
+  </div>
+</nav>
+
+<!-- ========================================================
+     HERO
+     ======================================================== -->
+<section id="hero">
+  <div class="retro-grid"></div>
+
+  <div class="orbit-container">
+    <div class="orbit-ring"><div class="orbit-dot"></div></div>
+    <div class="orbit-ring"><div class="orbit-dot orbit-dot-purple"></div></div>
+    <div class="orbit-ring"></div>
+    <div class="orbit-center">🛰️</div>
+  </div>
+
+  <p class="hero-eyebrow">Hello, Universe. I'm</p>
+  <h1 class="hero-name">Arthur Nguyen</h1>
+
+  <div class="hero-typewriter">
+    <span id="tw-text"></span><span class="cursor-blink">|</span>
+  </div>
+
+  <p class="hero-desc">
+    Computer Systems Engineer at UGA — writing flight software for real spacecraft,
+    training ML models, and building systems that have to work the <em>first</em> time.
+  </p>
+
+  <div class="hero-ctas">
+    <a href="#projects" class="btn-primary">🚀 View Projects</a>
+    <a href="#contact"  class="btn-outline">✉️ Get In Touch</a>
+  </div>
+
+  <div class="scroll-hint" id="scroll-hint">
+    <span class="scroll-arrow">↓</span>
+    <span>SCROLL</span>
+  </div>
+</section>
+
+<!-- ========================================================
+     ABOUT
+     ======================================================== -->
+<section id="about">
+  <div class="section-inner">
+    <span class="section-label reveal">01 // About</span>
+    <h2 class="section-title reveal">A Builder At Heart</h2>
+    <div class="section-divider reveal"></div>
+
+    <div class="about-grid">
+
+      <div class="about-text reveal">
+        <p>
+          I'm a second-year Computer Systems Engineer at the University of Georgia's
+          Morehead Honors College, studying in the Department of Electrical and Computer Engineering.
+        </p>
+        <p>
+          As <strong class="hl">Chief Engineer of the MOCI mission</strong> at UGA's Small Satellite
+          Research Laboratory, I lead hardware-software integration for a spacecraft destined for
+          Low Earth Orbit — writing C-based flight software, architecting telemetry pipelines, and
+          deploying machine learning at the edge.
+        </p>
+        <p>
+          Outside the lab I build whatever excites me — computer vision pipelines,
+          custom embedded hardware, AI-powered apps, and polished web experiences.
+          My philosophy: if it's worth building, it's worth doing right.
+        </p>
+        <div style="margin-top:1.75rem; display:flex; gap:.75rem; flex-wrap:wrap;">
+          <a href="https://github.com/Arthur-Maybe" target="_blank" class="btn-primary">⌨️ GitHub</a>
+          <a href="mailto:your@email.com" class="btn-outline">✉️ Email Me</a>
+        </div>
+      </div>
+
+      <div class="about-stats">
+        <div class="stat-card reveal reveal-d1">
+          <span class="stat-number" data-count="1">0</span>
+          <span class="stat-label">Spacecraft Engineered</span>
+        </div>
+        <div class="stat-card reveal reveal-d2">
+          <span class="stat-number" data-count="99" data-suffix=".9%">0</span>
+          <span class="stat-label">Data Integrity Rate Achieved</span>
+        </div>
+        <div class="stat-card reveal reveal-d3">
+          <span class="stat-number" data-count="15" data-suffix="+">0</span>
+          <span class="stat-label">Critical Anomalies Resolved</span>
+        </div>
+        <div class="stat-card reveal reveal-d4">
+          <span class="stat-number" data-count="5" data-suffix="+">0</span>
+          <span class="stat-label">Subsystems Integrated</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================
+     EXPERIENCE / MISSION LOG
+     ======================================================== -->
+<section id="experience">
+  <div class="section-inner">
+    <span class="section-label reveal">02 // Experience</span>
+    <h2 class="section-title reveal">Mission Log</h2>
+    <div class="section-divider reveal"></div>
+
+    <div class="timeline">
+
+      <!-- MOCI CHIEF ENGINEER -->
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="exp-card">
+          <div class="exp-role">MOCI Chief Engineer</div>
+          <div class="exp-org">UGA Small Satellite Research Laboratory</div>
+          <div class="exp-date">📍 Athens, GA &nbsp;·&nbsp; January 2026 – Present</div>
+          <ul class="exp-bullets">
+            <li>Directed system-level architecture and integration across five distinct engineering subsystems (Command &amp; Data Handling, ADCS, Power, Communications, Payload), managing complex interface handoffs to ensure strict adherence to mission power and data budgets.</li>
+            <li>Spearheaded rigorous mission-readiness pipelines, orchestrating <strong class="hl">24-hour continuous hardware-in-the-loop simulations</strong> that successfully identified, tracked, and resolved over <strong class="hl">15 critical cross-subsystem anomalies</strong> to ensure fault-tolerant performance.</li>
+            <li>Led a cross-functional engineering team, defining technical milestones, mentoring sub-team leads, and eliminating technical bottlenecks to drive on-time task completion.</li>
+            <li>Took full ownership of the spacecraft's launch readiness, establishing streamlined communication protocols between the mechanical, electrical, and software teams without requiring external oversight.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Systems Integration</span>
+            <span class="tag">Hardware-in-the-Loop (HIL)</span>
+            <span class="tag">I2C / SPI / UART</span>
+            <span class="tag">Git</span>
+            <span class="tag">Jira / Agile</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- FLIGHT SOFTWARE LEAD -->
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="exp-card">
+          <div class="exp-role">Flight Software Lead</div>
+          <div class="exp-org">UGA Small Satellite Research Laboratory</div>
+          <div class="exp-date">📍 Athens, GA &nbsp;·&nbsp; September 2024 – December 2025</div>
+          <ul class="exp-bullets">
+            <li>Engineered custom flight software (FSW) architectures, designing robust telemetry, command scheduling, and communication pipelines that maintained a <strong class="hl">99.9% data integrity rate</strong> under strict mission-critical constraints.</li>
+            <li>Developed and deployed machine learning-backed <strong class="hl">Structure from Motion (SfM)</strong> algorithms on an edge-compute module, successfully bridging the primary optical payload to enable near real-time 3D image processing in Low Earth Orbit.</li>
+            <li>Programmed Attitude Determination and Control System (ADCS) algorithms, integrating complex sensor data processing and control logic to optimize pointing accuracy, detumbling, and overall spacecraft stabilization.</li>
+            <li>Built comprehensive software-in-the-loop (SIL) testing environments, utilizing automated scripting to validate memory management, detect edge-case logic failures, and resolve code-level bugs prior to system-wide integration.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Embedded C / C++</span>
+            <span class="tag">Python</span>
+            <span class="tag">FreeRTOS</span>
+            <span class="tag">Nvidia Jetson TX2i</span>
+            <span class="tag">CUDA</span>
+            <span class="tag">OpenCV</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- UGA EDUCATION -->
+      <div class="timeline-item reveal">
+        <div class="timeline-dot purple"></div>
+        <div class="exp-card">
+          <div class="exp-role">B.S. Computer Systems Engineering</div>
+          <div class="exp-org">University of Georgia — Morehead Honors College</div>
+          <div class="exp-date">📍 Athens, GA &nbsp;·&nbsp; Expected May 2028</div>
+          <ul class="exp-bullets">
+            <li>Pursuing a Bachelor of Science in Computer Systems Engineering within the ECE Department.</li>
+            <li>Relevant coursework: Data Structures, Electronics I, Design Methodology, Systems Programming.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag tag-purple">Honors College</span>
+            <span class="tag tag-purple">ECE</span>
+            <span class="tag tag-purple">Systems Engineering</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================
+     PROJECTS
+     ======================================================== -->
+<section id="projects">
+  <div class="section-inner">
+    <span class="section-label reveal">03 // Projects</span>
+    <h2 class="section-title reveal">Things I've Built</h2>
+    <div class="section-divider reveal"></div>
+
+    <div class="bento-grid">
+
+      <!-- Electronics Tool Bench — LARGE -->
+      <div class="project-card bento-lg reveal">
+        <span class="project-icon">⚡</span>
+        <div class="project-title">Electronics Tool Bench</div>
+        <div class="highlight-row">
+          <span class="highlight-badge">🔬 SAR ADC Voltmeter</span>
+          <span class="highlight-badge">📡 10 kHz Function Generator</span>
+          <span class="highlight-badge">🔭 Auto-Ranging Ohmmeter</span>
+        </div>
+        <div class="project-desc">
+          Engineered a low-latency Python hardware abstraction layer on a Raspberry Pi 4 to control
+          an R-2R 6-bit DAC, SPI digital potentiometers, and an I2C LCD via the pigpio daemon.
+          Implemented a 6-bit SAR ADC voltmeter with binary-search algorithms, signal noise
+          reduction, and quadrature uncertainty calculation. Developed a multi-function generator
+          for square and sine waves up to 10 kHz using hardware PWM and custom DMA-driven pulse trains.
+        </div>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">Raspberry Pi 4</span>
+          <span class="tag">pigpio</span>
+          <span class="tag">SPI</span>
+          <span class="tag">I2C</span>
+          <span class="tag">R-2R DAC</span>
+        </div>
+        <a href="https://github.com/Arthur-Maybe" target="_blank" class="project-link">View on GitHub →</a>
+      </div>
+
+      <!-- NutriSense — SMALL -->
+      <div class="project-card bento-sm reveal reveal-d1">
+        <span class="project-icon">🥗</span>
+        <div class="project-title">NutriSense</div>
+        <div class="project-desc">
+          Computer vision pipeline using Python, OpenCV, and YOLOv8 — CNN-based object detection
+          classifies fridge ingredients with high accuracy. Features a vectorized rule-based
+          recommendation engine for personalized meal plans, plus a RESTful backend integrating
+          geolocation and retail APIs with a custom distance-price optimization algorithm.
+        </div>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">YOLOv8</span>
+          <span class="tag">OpenCV</span>
+          <span class="tag">REST APIs</span>
+          <span class="tag">Geolocation</span>
+        </div>
+        <a href="https://github.com/Arthur-Maybe" target="_blank" class="project-link">View on GitHub →</a>
+      </div>
+
+      <!-- StoryMaker — HALF -->
+      <div class="project-card bento-h reveal reveal-d2">
+        <span class="project-icon">🎬</span>
+        <div class="project-title">StoryMaker</div>
+        <div class="project-desc">
+          Java backend leveraging concurrency and FFmpeg to process asynchronous video encoding
+          and manage real-time user queues. Integrated Generative AI APIs for dynamic content
+          creation, paired with a responsive JavaScript frontend for real-time DOM manipulation
+          and client-server communication.
+        </div>
+        <div class="tags">
+          <span class="tag">Java</span>
+          <span class="tag">FFmpeg</span>
+          <span class="tag">Generative AI</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Concurrency</span>
+        </div>
+        <a href="https://github.com/Arthur-Maybe" target="_blank" class="project-link">View on GitHub →</a>
+      </div>
+
+      <!-- Restaurant — HALF -->
+      <div class="project-card bento-h reveal reveal-d3">
+        <span class="project-icon">🍽️</span>
+        <div class="project-title">Modern Restaurant Website</div>
+        <div class="project-desc">
+          Responsive single-page application built with HTML5 and advanced CSS3.
+          Vanilla JavaScript handles custom SPA routing, smooth view transitions, and
+          client-side form handling for a full reservation system with confirmation sequencing.
+          Zero frameworks — just craft.
+        </div>
+        <div class="tags">
+          <span class="tag">JavaScript</span>
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+          <span class="tag">SPA</span>
+        </div>
+        <a href="https://github.com/Arthur-Maybe" target="_blank" class="project-link">View on GitHub →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================
+     SKILLS
+     ======================================================== -->
+<section id="skills">
+  <div class="section-inner">
+    <span class="section-label reveal">04 // Skills</span>
+    <h2 class="section-title reveal">Tech Arsenal</h2>
+    <div class="section-divider reveal"></div>
+
+    <div class="skills-grid">
+
+      <div class="skill-cat reveal">
+        <div class="skill-cat-head">Languages</div>
+        <div class="skill-item">
+          <div class="skill-row"><span class="skill-name">Python</span><span class="skill-pct">95%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-row"><span class="skill-name">C / Systems</span><span class="skill-pct">88%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-row"><span class="skill-name">Java</span><span class="skill-pct">82%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-row"><span class="skill-name">JavaScript</span><span class="skill-pct">78%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-row"><span class="skill-name">HTML / CSS</span><span class="skill-pct">86%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="86"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-cat reveal reveal-d1">
+        <div class="skill-cat-head">ML / Vision</div>
+        <div class="skill-item">
+          <div class="skill-row"><span class="skill-name">YOLOv8 / CNN</span><span class="skill-pct">85%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-row"><span class="skill-name">OpenCV</span><span class="skill-pct">82%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-row"><span class="skill-name">Structure from Motion</span><span class="skill-pct">80%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-row"><span class="skill-name">Generative AI APIs</span><span class="skill-pct">75%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-cat reveal reveal-d2">
+        <div class="skill-cat-head">Embedded / HW</div>
+        <div class="skill-item">
+          <div class="skill-row"><span class="skill-name">Raspberry Pi / pigpio</span><span class="skill-pct">90%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-row"><span class="skill-name">SPI / I2C Protocols</span><span class="skill-pct">87%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="87"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-row"><span class="skill-name">Flight Software (C)</span><span class="skill-pct">86%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="86"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-row"><span class="skill-name">DAC / ADC Design</span><span class="skill-pct">80%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-cat reveal reveal-d3">
+        <div class="skill-cat-head">Systems / Tools</div>
+        <div class="skill-item">
+          <div class="skill-row"><span class="skill-name">System Architecture</span><span class="skill-pct">88%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-row"><span class="skill-name">FFmpeg / Multimedia</span><span class="skill-pct">78%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-row"><span class="skill-name">REST API Design</span><span class="skill-pct">82%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-row"><span class="skill-name">Git / Version Control</span><span class="skill-pct">90%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================
+     CONTACT
+     ======================================================== -->
+<section id="contact">
+  <div class="section-inner">
+    <span class="section-label reveal">05 // Contact</span>
+    <h2 class="section-title reveal">Let's Connect</h2>
+    <div class="section-divider reveal"></div>
+
+    <div class="contact-grid">
+
+      <div class="contact-info reveal">
+        <h3>Open to Opportunities</h3>
+        <p>
+          Whether you're looking for an intern who can write flight software and
+          train neural networks, or just want to talk about spacecraft and embedded
+          systems — I'm always happy to chat.
+        </p>
+        <div class="social-links">
+          <a href="mailto:your@email.com" class="social-link">
+            <div class="social-icon">✉️</div>
+            <div>
+              <div class="social-text-label">Email</div>
+              <div class="social-handle">your@email.com</div>
+            </div>
+          </a>
+          <a href="https://github.com/Arthur-Maybe" target="_blank" class="social-link">
+            <div class="social-icon" style="font-size:1.3rem">⌨️</div>
+            <div>
+              <div class="social-text-label">GitHub</div>
+              <div class="social-handle">Arthur-Maybe</div>
+            </div>
+          </a>
+          <!-- 🔗 REPLACE href="#" WITH YOUR LINKEDIN URL -->
+          <a href="#" target="_blank" class="social-link" id="linkedin-link">
+            <div class="social-icon">💼</div>
+            <div>
+              <div class="social-text-label">LinkedIn</div>
+              <div class="social-handle">https://www.linkedin.com/in/minh-nguyen-398874216/</div>
+            </div>
+          </a>
+          <a href="tel:7657673627" class="social-link">
+            <div class="social-icon">📱</div>
+            <div>
+              <div class="social-text-label">Phone</div>
+              <div class="social-handle">(765) 767-3627</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="reveal reveal-d1">
+        <form class="contact-form" id="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label>NAME</label>
+              <input type="text" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label>EMAIL</label>
+              <input type="email" name="email" placeholder="you@email.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>SUBJECT</label>
+            <input type="text" name="subject" placeholder="What's this about?">
+          </div>
+          <div class="form-group">
+            <label>MESSAGE</label>
+            <textarea name="message" placeholder="Tell me what you're working on…" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="justify-content:center;">
+            🚀 Send Message
+          </button>
+          <div class="form-success" id="form-success">
+            ✅ Sent! I'll get back to you soon.
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================
+     FOOTER
+     ======================================================== -->
+<footer>
+  <p>Designed &amp; built by <span class="accent">Arthur Nguyen</span> &nbsp;·&nbsp; UGA Computer Systems Engineering &nbsp;·&nbsp; <span class="accent">© 2025</span></p>
+  <p style="margin-top:.5rem;font-size:.7rem;opacity:.55;">Pure HTML · CSS · Vanilla JS — no frameworks, just craft.</p>
+</footer>
+
+<!-- Scripts -->
+<script src="assets/js/main.js"></script>
+</body>
+</html>
