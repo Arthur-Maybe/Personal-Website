@@ -214,7 +214,7 @@ window.addEventListener('scroll', () => {
    ========================================================= */
 const EMAILJS_PUBLIC_KEY  = '5_-VtiumdcRkN-hNJ';   // Account → API Keys
 const EMAILJS_SERVICE_ID  = 'service_m4ditzo';   // Email Services tab
-const EMAILJS_TEMPLATE_ID = 'template_3fsygou';  // Email Templates tab
+const EMAILJS_TEMPLATE_ID = 'template_ym6i0y6';  // Email Templates tab
 
 emailjs.init(EMAILJS_PUBLIC_KEY);
 
