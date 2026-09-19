@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arthur Nguyen — Computer Systems Engineer</title>
+  <title>Minh Nguyen — Computer Systems Engineer</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,7 +32,7 @@
      NAV
      ======================================================== -->
 <nav id="navbar">
-  <a href="#hero" class="nav-logo">AN</a>
+  <a href="#hero" class="nav-logo">MN</a>
 
   <ul class="nav-links" id="nav-links">
     <li><a href="#about">About</a></li>
@@ -62,7 +62,7 @@
   </div>
 
   <p class="hero-eyebrow">Hello, Universe. I'm</p>
-  <h1 class="hero-name">Arthur Nguyen</h1>
+  <h1 class="hero-name">Minh Nguyen</h1>
 
   <div class="hero-typewriter">
     <span id="tw-text"></span><span class="cursor-blink">|</span>
@@ -70,7 +70,7 @@
 
   <p class="hero-desc">
     Computer Systems Engineer at UGA — writing flight software for real spacecraft,
-    training ML models, and building systems that have to work the <em>first</em> time.
+    engineering embedded control systems, and building hardware that has to work the <em>first</em> time.
   </p>
 
   <div class="hero-ctas">
@@ -102,14 +102,15 @@
         </p>
         <p>
           As <strong class="hl">Chief Engineer of the MOCI mission</strong> at UGA's Small Satellite
-          Research Laboratory, I lead hardware-software integration for a spacecraft destined for
-          Low Earth Orbit — writing C-based flight software, architecting telemetry pipelines, and
-          deploying machine learning at the edge.
+          Research Laboratory, I direct the C-based flight-software architecture across five subsystems,
+          building Docker-based development pipelines, writing C90 flight software with the Bright Ascension
+          framework, and debugging embedded anomalies with oscilloscopes and encoder diagnostics.
         </p>
         <p>
-          Outside the lab I build whatever excites me — computer vision pipelines,
-          custom embedded hardware, AI-powered apps, and polished web experiences.
-          My philosophy: if it's worth building, it's worth doing right.
+          I'm also an undergraduate researcher on a robotic gearbox disassembly project, designing
+          finite-state machines for human-intent prediction and safety-critical path planning. Outside
+          the lab I build whatever excites me: custom PCBs, embedded firmware, control systems, and
+          computer vision pipelines. My philosophy: if it's worth building, it's worth doing right.
         </p>
         <div style="margin-top:1.75rem; display:flex; gap:.75rem; flex-wrap:wrap;">
           <a href="https://github.com/Arthur-Maybe" target="_blank" class="btn-primary">⌨️ GitHub</a>
@@ -123,12 +124,12 @@
           <span class="stat-label">Spacecraft Engineered</span>
         </div>
         <div class="stat-card reveal reveal-d2">
-          <span class="stat-number" data-count="99" data-suffix=".9%">0</span>
-          <span class="stat-label">Data Integrity Rate Achieved</span>
+          <span class="stat-number" data-count="3" data-suffix=".81">0</span>
+          <span class="stat-label">GPA</span>
         </div>
         <div class="stat-card reveal reveal-d3">
-          <span class="stat-number" data-count="15" data-suffix="+">0</span>
-          <span class="stat-label">Critical Anomalies Resolved</span>
+          <span class="stat-number" data-count="4" data-suffix="+">0</span>
+          <span class="stat-label">Projects Built</span>
         </div>
         <div class="stat-card reveal reveal-d4">
           <span class="stat-number" data-count="5" data-suffix="+">0</span>
@@ -151,25 +152,66 @@
 
     <div class="timeline">
 
+      <!-- ROBOTICS LAB -->
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="exp-card">
+          <div class="exp-role">Undergraduate Researcher</div>
+          <div class="exp-org">Robotics Lab</div>
+          <div class="exp-date">📍 Athens, GA &nbsp;·&nbsp; August 2026 – Present</div>
+          <ul class="exp-bullets">
+            <li>Design a <strong class="hl">Finite State Machine</strong> utilizing MediaPipe skeletal tracking to predict human intent during robotic disassembly, significantly reducing false-positive safety triggers in shared workspaces.</li>
+            <li>Develop a safety-critical path planning architecture utilizing <strong class="hl">GraspNet</strong> and geometric heuristics, translating computer vision topics into collision-free joint trajectories to achieve automated robotic disassembly.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">MediaPipe</span>
+            <span class="tag">GraspNet</span>
+            <span class="tag">Path Planning</span>
+            <span class="tag">Computer Vision</span>
+          </div>
+        </div>
+      </div>
+
       <!-- MOCI CHIEF ENGINEER -->
       <div class="timeline-item reveal">
         <div class="timeline-dot"></div>
         <div class="exp-card">
           <div class="exp-role">MOCI Chief Engineer</div>
           <div class="exp-org">UGA Small Satellite Research Laboratory</div>
-          <div class="exp-date">📍 Athens, GA &nbsp;·&nbsp; January 2026 – Present</div>
+          <div class="exp-date">📍 Athens, GA &nbsp;·&nbsp; December 2025 – Present</div>
           <ul class="exp-bullets">
-            <li>Directed system-level architecture and integration across five distinct engineering subsystems (Command &amp; Data Handling, ADCS, Power, Communications, Payload), managing complex interface handoffs to ensure strict adherence to mission power and data budgets.</li>
-            <li>Spearheaded rigorous mission-readiness pipelines, orchestrating <strong class="hl">24-hour continuous hardware-in-the-loop simulations</strong> that successfully identified, tracked, and resolved over <strong class="hl">15 critical cross-subsystem anomalies</strong> to ensure fault-tolerant performance.</li>
-            <li>Led a cross-functional engineering team, defining technical milestones, mentoring sub-team leads, and eliminating technical bottlenecks to drive on-time task completion.</li>
-            <li>Took full ownership of the spacecraft's launch readiness, establishing streamlined communication protocols between the mechanical, electrical, and software teams without requiring external oversight.</li>
+            <li>Direct the <strong class="hl">C-based flight-software architecture</strong> for five subsystems, using Docker containers to build a repeatable development pipeline that improves reliability and reduces integration errors.</li>
+            <li>Develop C90 flight-software scripts with the <strong class="hl">Bright Ascension framework</strong> to automate spacecraft state-machine transitions, control loops, and power sequencing, enabling reliable autonomous operation.</li>
+            <li>Debug embedded anomalies during hardware-in-the-loop testing using oscilloscopes and encoder diagnostics, isolate non-volatile flash memory corruption, and restore all flight modes.</li>
           </ul>
           <div class="tags">
-            <span class="tag">Systems Integration</span>
+            <span class="tag">Embedded C / C90</span>
+            <span class="tag">Bright Ascension</span>
+            <span class="tag">Docker</span>
             <span class="tag">Hardware-in-the-Loop (HIL)</span>
-            <span class="tag">I2C / SPI / UART</span>
-            <span class="tag">Git</span>
-            <span class="tag">Jira / Agile</span>
+            <span class="tag">Oscilloscopes</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- VENUEHORN -->
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="exp-card">
+          <div class="exp-role">ML/AI Engineering Intern</div>
+          <div class="exp-org">Venuehorn</div>
+          <div class="exp-date">📍 Remote, MA &nbsp;·&nbsp; May 2026 – August 2026</div>
+          <ul class="exp-bullets">
+            <li>Architected a chatbot and intent-extraction engine with <strong class="hl">FastAPI</strong> and the OpenAI API that converted natural-language queries into safe SQL statements, preventing injection attacks and enabling users to retrieve data instantly.</li>
+            <li>Developed a vector-based recommendation system using PostgreSQL pgvector and SQLAlchemy, pre-filtering geospatial candidates to cut cosine-similarity computation time and deliver faster, more relevant recommendations.</li>
+            <li>Built an asynchronous computer-vision pipeline with Celery, OpenCV, and YOLOv8 that processed images from AWS S3 and stored extracted metadata in PostgreSQL, automating image analysis and tagging.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">FastAPI</span>
+            <span class="tag">OpenAI API</span>
+            <span class="tag">PostgreSQL / pgvector</span>
+            <span class="tag">Celery</span>
+            <span class="tag">YOLOv8</span>
           </div>
         </div>
       </div>
@@ -183,7 +225,6 @@
           <div class="exp-date">📍 Athens, GA &nbsp;·&nbsp; September 2024 – December 2025</div>
           <ul class="exp-bullets">
             <li>Engineered custom flight software (FSW) architectures, designing robust telemetry, command scheduling, and communication pipelines that maintained a <strong class="hl">99.9% data integrity rate</strong> under strict mission-critical constraints.</li>
-            <li>Developed and deployed machine learning-backed <strong class="hl">Structure from Motion (SfM)</strong> algorithms on an edge-compute module, successfully bridging the primary optical payload to enable near real-time 3D image processing in Low Earth Orbit.</li>
             <li>Programmed Attitude Determination and Control System (ADCS) algorithms, integrating complex sensor data processing and control logic to optimize pointing accuracy, detumbling, and overall spacecraft stabilization.</li>
             <li>Built comprehensive software-in-the-loop (SIL) testing environments, utilizing automated scripting to validate memory management, detect edge-case logic failures, and resolve code-level bugs prior to system-wide integration.</li>
           </ul>
@@ -204,15 +245,15 @@
         <div class="exp-card">
           <div class="exp-role">B.S. Computer Systems Engineering</div>
           <div class="exp-org">University of Georgia — Morehead Honors College</div>
-          <div class="exp-date">📍 Athens, GA &nbsp;·&nbsp; Expected May 2028</div>
+          <div class="exp-date">📍 Athens, GA &nbsp;·&nbsp; Expected May 2028 &nbsp;·&nbsp; GPA: 3.81</div>
           <ul class="exp-bullets">
-            <li>Pursuing a Bachelor of Science in Computer Systems Engineering within the ECE Department.</li>
-            <li>Relevant coursework: Data Structures, Electronics I, Design Methodology, Systems Programming.</li>
+            <li>Pursuing a Bachelor of Science in Computer Systems Engineering within the ECSE Department.</li>
+            <li>Relevant coursework: Data Structures, Electronics I, Systems Programming, Sensors & Transducers, Linear Systems, Design of Digital Systems.</li>
           </ul>
           <div class="tags">
             <span class="tag tag-purple">Honors College</span>
-            <span class="tag tag-purple">ECE</span>
-            <span class="tag tag-purple">Systems Engineering</span>
+            <span class="tag tag-purple">ECSE</span>
+            <span class="tag tag-purple">Computer Systems Engineering</span>
           </div>
         </div>
       </div>
@@ -227,13 +268,60 @@
 <section id="projects">
   <div class="section-inner">
     <span class="section-label reveal">03 // Projects</span>
-    <h2 class="section-title reveal">Things I've Built</h2>
+    <h2 class="section-title reveal">Things I've Worked On</h2>
     <div class="section-divider reveal"></div>
 
     <div class="bento-grid">
 
-      <!-- Electronics Tool Bench — LARGE -->
+      <!-- Smart Biometric Polygraph — LARGE -->
       <div class="project-card bento-lg reveal">
+        <span class="project-icon">🫀</span>
+        <div class="project-title">Smart Biometric Polygraph</div>
+        <div class="highlight-row">
+          <span class="highlight-badge">🔌 Custom Mixed-Signal PCB</span>
+          <span class="highlight-badge">📶 ESP32-S3 Firmware</span>
+          <span class="highlight-badge">📈 Kalman Filtering</span>
+        </div>
+        <div class="project-desc">
+          Designing a custom mixed-signal PCB in Altium Designer for a wrist-worn IoT device, engineering
+          ground plane separation to isolate Wi-Fi noise from highly sensitive analog instrumentation
+          amplifiers. Developing C/C++ ESP32-S3 firmware to interface with I2C sensors and applying
+          Kalman filtering to raw optical PPG data, successfully extracting respiratory markers.
+          Formulating a dynamic "Deception Probability Score" algorithm by fusing multi-sensor telemetry
+          and hardware linearization, with statistical baselines established through ANSI/ASME standards.
+        </div>
+        <div class="tags">
+          <span class="tag">Altium Designer</span>
+          <span class="tag">ESP32-S3</span>
+          <span class="tag">C / C++</span>
+          <span class="tag">I2C</span>
+          <span class="tag">Signal Processing</span>
+        </div>
+        <a href="https://github.com/Arthur-Maybe" target="_blank" class="project-link">View on GitHub →</a>
+      </div>
+
+      <!-- Self-Balancing Robot — SMALL -->
+      <div class="project-card bento-sm reveal reveal-d1">
+        <span class="project-icon">⚖️</span>
+        <div class="project-title">Self-Balancing Robot</div>
+        <div class="project-desc">
+          Architected a cascaded PID control system on an ESP32 with anti-windup constraints, processing
+          100Hz IMU telemetry and encoder data to maintain dynamic equilibrium and prevent motor stalling.
+          Engineered a Hardware-in-the-Loop (HIL) tuning pipeline over Serial communication, enabling rapid
+          iteration of physical control loops and real-time validation of balancing algorithms.
+        </div>
+        <div class="tags">
+          <span class="tag">C++</span>
+          <span class="tag">ESP32 / MCU</span>
+          <span class="tag">PID Control</span>
+          <span class="tag">IMU / Encoders</span>
+          <span class="tag">HIL Testing</span>
+        </div>
+        <a href="https://github.com/Arthur-Maybe" target="_blank" class="project-link">View on GitHub →</a>
+      </div>
+
+      <!-- Electronics Tool Bench — LARGE -->
+      <div class="project-card bento-lg reveal reveal-d2">
         <span class="project-icon">⚡</span>
         <div class="project-title">Electronics Tool Bench</div>
         <div class="highlight-row">
@@ -260,7 +348,7 @@
       </div>
 
       <!-- NutriSense — SMALL -->
-      <div class="project-card bento-sm reveal reveal-d1">
+      <div class="project-card bento-sm reveal reveal-d3">
         <span class="project-icon">🥗</span>
         <div class="project-title">NutriSense</div>
         <div class="project-desc">
@@ -280,7 +368,7 @@
       </div>
 
       <!-- StoryMaker — HALF -->
-      <div class="project-card bento-h reveal reveal-d2">
+      <div class="project-card bento-h reveal reveal-d1">
         <span class="project-icon">🎬</span>
         <div class="project-title">StoryMaker</div>
         <div class="project-desc">
@@ -300,7 +388,7 @@
       </div>
 
       <!-- Restaurant — HALF -->
-      <div class="project-card bento-h reveal reveal-d3">
+      <div class="project-card bento-h reveal reveal-d2">
         <span class="project-icon">🍽️</span>
         <div class="project-title">Modern Restaurant Website</div>
         <div class="project-desc">
@@ -336,80 +424,84 @@
       <div class="skill-cat reveal">
         <div class="skill-cat-head">Languages</div>
         <div class="skill-item">
+          <div class="skill-row"><span class="skill-name">C / Embedded C</span><span class="skill-pct">92%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-row"><span class="skill-name">C++</span><span class="skill-pct">88%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+        </div>
+        <div class="skill-item">
           <div class="skill-row"><span class="skill-name">Python</span><span class="skill-pct">95%</span></div>
           <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
         </div>
         <div class="skill-item">
-          <div class="skill-row"><span class="skill-name">C / Systems</span><span class="skill-pct">88%</span></div>
-          <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+          <div class="skill-row"><span class="skill-name">Rust</span><span class="skill-pct">65%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
         </div>
         <div class="skill-item">
-          <div class="skill-row"><span class="skill-name">Java</span><span class="skill-pct">82%</span></div>
-          <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-row"><span class="skill-name">JavaScript</span><span class="skill-pct">78%</span></div>
+          <div class="skill-row"><span class="skill-name">JavaScript / HTML / CSS</span><span class="skill-pct">78%</span></div>
           <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-row"><span class="skill-name">HTML / CSS</span><span class="skill-pct">86%</span></div>
-          <div class="skill-bar"><div class="skill-fill" data-width="86"></div></div>
         </div>
       </div>
 
       <div class="skill-cat reveal reveal-d1">
-        <div class="skill-cat-head">ML / Vision</div>
+        <div class="skill-cat-head">Embedded / Hardware</div>
         <div class="skill-item">
-          <div class="skill-row"><span class="skill-name">YOLOv8 / CNN</span><span class="skill-pct">85%</span></div>
+          <div class="skill-row"><span class="skill-name">RTOS</span><span class="skill-pct">85%</span></div>
           <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
         </div>
         <div class="skill-item">
-          <div class="skill-row"><span class="skill-name">OpenCV</span><span class="skill-pct">82%</span></div>
-          <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+          <div class="skill-row"><span class="skill-name">Bright Ascension / Flight SW</span><span class="skill-pct">86%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="86"></div></div>
         </div>
         <div class="skill-item">
-          <div class="skill-row"><span class="skill-name">Structure from Motion</span><span class="skill-pct">80%</span></div>
-          <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+          <div class="skill-row"><span class="skill-name">SPI / I2C Protocols</span><span class="skill-pct">88%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
         </div>
         <div class="skill-item">
-          <div class="skill-row"><span class="skill-name">Generative AI APIs</span><span class="skill-pct">75%</span></div>
-          <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+          <div class="skill-row"><span class="skill-name">FPGAs</span><span class="skill-pct">70%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-row"><span class="skill-name">Oscilloscopes / Debugging</span><span class="skill-pct">87%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="87"></div></div>
         </div>
       </div>
 
       <div class="skill-cat reveal reveal-d2">
-        <div class="skill-cat-head">Embedded / HW</div>
+        <div class="skill-cat-head">Robotics / Vision</div>
         <div class="skill-item">
-          <div class="skill-row"><span class="skill-name">Raspberry Pi / pigpio</span><span class="skill-pct">90%</span></div>
-          <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+          <div class="skill-row"><span class="skill-name">MediaPipe</span><span class="skill-pct">83%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="83"></div></div>
         </div>
         <div class="skill-item">
-          <div class="skill-row"><span class="skill-name">SPI / I2C Protocols</span><span class="skill-pct">87%</span></div>
-          <div class="skill-bar"><div class="skill-fill" data-width="87"></div></div>
+          <div class="skill-row"><span class="skill-name">GraspNet / Path Planning</span><span class="skill-pct">78%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
         </div>
         <div class="skill-item">
-          <div class="skill-row"><span class="skill-name">Flight Software (C)</span><span class="skill-pct">86%</span></div>
-          <div class="skill-bar"><div class="skill-fill" data-width="86"></div></div>
+          <div class="skill-row"><span class="skill-name">OpenCV / YOLOv8</span><span class="skill-pct">85%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
         </div>
         <div class="skill-item">
-          <div class="skill-row"><span class="skill-name">DAC / ADC Design</span><span class="skill-pct">80%</span></div>
-          <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+          <div class="skill-row"><span class="skill-name">SLEAP</span><span class="skill-pct">70%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
         </div>
       </div>
 
       <div class="skill-cat reveal reveal-d3">
         <div class="skill-cat-head">Systems / Tools</div>
         <div class="skill-item">
-          <div class="skill-row"><span class="skill-name">System Architecture</span><span class="skill-pct">88%</span></div>
+          <div class="skill-row"><span class="skill-name">Docker</span><span class="skill-pct">88%</span></div>
           <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
         </div>
         <div class="skill-item">
-          <div class="skill-row"><span class="skill-name">FFmpeg / Multimedia</span><span class="skill-pct">78%</span></div>
-          <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+          <div class="skill-row"><span class="skill-name">CI/CD</span><span class="skill-pct">80%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
         </div>
         <div class="skill-item">
-          <div class="skill-row"><span class="skill-name">REST API Design</span><span class="skill-pct">82%</span></div>
-          <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+          <div class="skill-row"><span class="skill-name">FastAPI / REST APIs</span><span class="skill-pct">84%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="84"></div></div>
         </div>
         <div class="skill-item">
           <div class="skill-row"><span class="skill-name">Git / Version Control</span><span class="skill-pct">90%</span></div>
@@ -454,7 +546,7 @@
               <div class="social-handle">Arthur-Maybe</div>
             </div>
           </a>
-          <a href="https://www.linkedin.com/in/minh-nguyen-398874216/" target="_blank" class="social-link" id="linkedin-link">
+          <a href="https://www.linkedin.com/in/minh-manh-tuan-nguyen-398874216/" target="_blank" class="social-link" id="linkedin-link">
             <div class="social-icon">💼</div>
             <div>
               <div class="social-text-label">LinkedIn</div>
@@ -511,7 +603,7 @@
      FOOTER
      ======================================================== -->
 <footer>
-  <p>Designed &amp; built by <span class="accent">Arthur Nguyen</span> &nbsp;·&nbsp; UGA Computer Systems Engineering &nbsp;·&nbsp; <span class="accent">© 2025</span></p>
+  <p>Designed &amp; built by <span class="accent">Minh Nguyen</span> &nbsp;·&nbsp; UGA Computer Systems Engineering &nbsp;·&nbsp; <span class="accent">© 2025</span></p>
   <p style="margin-top:.5rem;font-size:.7rem;opacity:.55;">Pure HTML · CSS · Vanilla JS — no frameworks, just craft.</p>
 </footer>
 
