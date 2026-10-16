@@ -107,10 +107,12 @@
           framework, and debugging embedded anomalies with oscilloscopes and encoder diagnostics.
         </p>
         <p>
-          I'm also an undergraduate researcher on a robotic gearbox disassembly project, designing
-          finite-state machines for human-intent prediction and safety-critical path planning. Outside
-          the lab I build whatever excites me: custom PCBs, embedded firmware, control systems, and
-          computer vision pipelines. My philosophy: if it's worth building, it's worth doing right.
+          I'm also an undergraduate researcher in two robotics labs. In one, I lead the development of a
+          rail-mounted robotic manipulator that places and retrieves sensors on plants in a greenhouse. In the
+          other, I work on ROS 2 motion planning, human-intent prediction, and safety-critical path planning
+          for a robotic gearbox disassembly cell. Outside the lab I build whatever excites me: custom PCBs,
+          embedded firmware, control systems, and computer vision pipelines. My philosophy: if it's worth
+          building, it's worth doing right.
         </p>
         <div style="margin-top:1.75rem; display:flex; gap:.75rem; flex-wrap:wrap;">
           <a href="https://github.com/Arthur-Maybe" target="_blank" class="btn-primary">⌨️ GitHub</a>
@@ -152,18 +154,46 @@
 
     <div class="timeline">
 
-      <!-- ROBOTICS LAB -->
+      <!-- GREENHOUSE ROBOTICS LAB -->
       <div class="timeline-item reveal">
         <div class="timeline-dot"></div>
         <div class="exp-card">
           <div class="exp-role">Undergraduate Researcher</div>
-          <div class="exp-org">Robotics Lab</div>
-          <div class="exp-date">📍 Athens, GA &nbsp;·&nbsp; August 2026 – Present</div>
+          <div class="exp-org">Greenhouse Robotics Lab</div>
+          <div class="exp-date">📍 Athens, GA &nbsp;·&nbsp; September 2026 – Present</div>
           <ul class="exp-bullets">
+            <li>Lead <strong class="hl">end-to-end development</strong> of a rail-mounted manipulator for autonomous greenhouse plant monitoring, owning requirements, architecture, a $2.5K+ bill of materials, and a scaled proof-of-concept testbed.</li>
+            <li>Design an overhead dual-drive XY gantry for an inverted 6-DOF arm and integrate <strong class="hl">G-code motion firmware</strong> with a ROS 2 hardware interface for repeatable sub-millimeter positioning.</li>
+            <li>Develop a coarse-to-fine localization pipeline fusing overhead AprilTag tracking with a wrist-mounted RealSense depth camera, using hand-eye calibration and <strong class="hl">visual servoing</strong> to place and retrieve sensors on plant leaves.</li>
+            <li>Architect an <strong class="hl">MQTT-based IoT bridge</strong> and task state machine that trigger autonomous place, retrieve, and verify cycles from sensor telemetry or operators, with a hardware e-stop and software interlocks.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">ROS 2</span>
+            <span class="tag">MQTT</span>
+            <span class="tag">AprilTag</span>
+            <span class="tag">RealSense</span>
+            <span class="tag">Visual Servoing</span>
+            <span class="tag">G-code Firmware</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- DISASSEMBLY ROBOTICS LAB -->
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="exp-card">
+          <div class="exp-role">Undergraduate Researcher</div>
+          <div class="exp-org">Disassembly Robotics Lab</div>
+          <div class="exp-date">📍 Athens, GA &nbsp;·&nbsp; May 2026 – Present</div>
+          <ul class="exp-bullets">
+            <li>Design and implement <strong class="hl">ROS 2 action-server architecture</strong> for collision-aware UR5e motion planning, integrating ROS 2 libraries to replace classical control logic with planning-scene-based collision avoidance.</li>
+            <li>Architect inter-node communication contracts between perception, state-machine orchestration, and robot control nodes for an automated gearbox disassembly pipeline.</li>
             <li>Design a <strong class="hl">Finite State Machine</strong> utilizing MediaPipe skeletal tracking to predict human intent during robotic disassembly, significantly reducing false-positive safety triggers in shared workspaces.</li>
             <li>Develop a safety-critical path planning architecture utilizing <strong class="hl">GraspNet</strong> and geometric heuristics, translating computer vision topics into collision-free joint trajectories to achieve automated robotic disassembly.</li>
           </ul>
           <div class="tags">
+            <span class="tag">ROS 2</span>
+            <span class="tag">UR5e</span>
             <span class="tag">MediaPipe</span>
             <span class="tag">GraspNet</span>
             <span class="tag">Path Planning</span>
@@ -416,7 +446,7 @@
 <section id="skills">
   <div class="section-inner">
     <span class="section-label reveal">04 // Skills</span>
-    <h2 class="section-title reveal">Tech Arsenal</h2>
+    <h2 class="section-title reveal">Tech Stack</h2>
     <div class="section-divider reveal"></div>
 
     <div class="skills-grid">
@@ -428,8 +458,8 @@
           <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
         </div>
         <div class="skill-item">
-          <div class="skill-row"><span class="skill-name">C++</span><span class="skill-pct">88%</span></div>
-          <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+          <div class="skill-row"><span class="skill-name">C++</span><span class="skill-pct">65%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
         </div>
         <div class="skill-item">
           <div class="skill-row"><span class="skill-name">Python</span><span class="skill-pct">95%</span></div>
@@ -460,7 +490,7 @@
           <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
         </div>
         <div class="skill-item">
-          <div class="skill-row"><span class="skill-name">FPGAs</span><span class="skill-pct">70%</span></div>
+          <div class="skill-row"><span class="skill-name">Verilog / FPGAs</span><span class="skill-pct">70%</span></div>
           <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
         </div>
         <div class="skill-item">
@@ -471,6 +501,10 @@
 
       <div class="skill-cat reveal reveal-d2">
         <div class="skill-cat-head">Robotics / Vision</div>
+        <div class="skill-item">
+          <div class="skill-row"><span class="skill-name">ROS 2</span><span class="skill-pct">85%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+        </div>
         <div class="skill-item">
           <div class="skill-row"><span class="skill-name">MediaPipe</span><span class="skill-pct">83%</span></div>
           <div class="skill-bar"><div class="skill-fill" data-width="83"></div></div>
@@ -494,6 +528,10 @@
         <div class="skill-item">
           <div class="skill-row"><span class="skill-name">Docker</span><span class="skill-pct">88%</span></div>
           <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-row"><span class="skill-name">Linux</span><span class="skill-pct">85%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
         </div>
         <div class="skill-item">
           <div class="skill-row"><span class="skill-name">CI/CD</span><span class="skill-pct">80%</span></div>
